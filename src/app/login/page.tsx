@@ -57,8 +57,14 @@ function LoginPage() {
         console.log(response);
         toast.error(response.message);
       }
-    } catch (error: any) {
-      toast.error(error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else if (typeof error === "string") {
+        toast.error(error);
+      } else {
+        toast.error("An unknown error occurred");
+      }
     } finally {
       setIsSubmitting(false);
     }

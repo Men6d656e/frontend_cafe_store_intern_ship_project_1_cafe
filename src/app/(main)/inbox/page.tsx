@@ -1,7 +1,7 @@
 "use client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { API_BASE_URL } from "@/constants/api";
-import { Frown, Loader, Loader2 } from "lucide-react";
+import { Frown, Loader} from "lucide-react";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 

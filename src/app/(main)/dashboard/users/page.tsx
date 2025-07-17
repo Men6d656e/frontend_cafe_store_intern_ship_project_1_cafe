@@ -40,7 +40,7 @@ const usernameSchema = z.object({
 
 type UserNameFromValues = z.infer<typeof usernameSchema>;
 
-function page() {
+function UsersPage() {
   const [users, setUsers] = useState<UserData[]>([]);
   const [loading, setLoading] = useState(false);
   const [isDialpogOpen, setIsDialpogOpen] = useState(false);
@@ -161,8 +161,8 @@ function page() {
               <DialogHeader>
                 <DialogTitle>Update Username</DialogTitle>
                 <DialogDescription>
-                  Make changes to the user's username here. Click save when
-                  you're done.
+                  Make changes to the user&apos;s username here. Click save when
+                  you&apos;re done.
                 </DialogDescription>
               </DialogHeader>
               <form
@@ -216,4 +216,4 @@ function page() {
   );
 }
 
-export default page;
+export default UsersPage;

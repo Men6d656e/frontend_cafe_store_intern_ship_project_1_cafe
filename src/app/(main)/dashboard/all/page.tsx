@@ -11,7 +11,7 @@ interface Data {
   pendingBokings: number;
 }
 
-function page() {
+function AllDashoardPage() {
   const [loading, setLoading] = useState(false);
   const [data, setdata] = useState<Data | null>(null);
   const fetchData = async () => {
@@ -117,4 +117,4 @@ function page() {
   );
 }
 
-export default page;
+export default AllDashoardPage;

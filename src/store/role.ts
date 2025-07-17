@@ -33,7 +33,7 @@ export const userRole = create<Role>((set) => ({
         }
         set({ role: newRole });
       } catch (error) {
-        console.error("Fail to write role in localStorage");
+        console.error("Fail to write role in localStorage", error);
       }
     }
   },

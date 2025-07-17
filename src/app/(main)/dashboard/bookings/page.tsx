@@ -20,7 +20,7 @@ interface Data {
   status: "rejected" | "pending" | "accepted";
 }
 
-function page() {
+function BookingPage() {
   const [data, setdata] = useState<Data[] | null>(null);
   const [pendingBookings, setPendingBookings] = useState<Data[]>([]);
   const [rejectedBookings, setRejectedBookings] = useState<Data[]>([]);
@@ -302,4 +302,4 @@ function page() {
   );
 }
 
-export default page;
+export default BookingPage;

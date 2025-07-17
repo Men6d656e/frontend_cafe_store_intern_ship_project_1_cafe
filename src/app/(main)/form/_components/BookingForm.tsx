@@ -18,7 +18,7 @@ const BookingFormSchema = z.object({
     .regex(/^(1[0-2]|0?[1-9])(am|pm)$/i, {
       message: "Invalid time format (e.g., 7pm, 10am).",
     }),
-  memberCount: z.coerce
+  memberCount: z
     .number()
     .min(1, "Minimum 1 Member is required")
     .max(20, "Maximum 20 members allowed.")
@@ -35,7 +35,7 @@ function BookingForm() {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<BookingFormValues>({
-    resolver: zodResolver(BookingFormSchema) as any,
+    resolver: zodResolver(BookingFormSchema),
     defaultValues: {
       date: "",
       time: "",
