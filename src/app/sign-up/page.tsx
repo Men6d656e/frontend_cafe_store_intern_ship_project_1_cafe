@@ -56,7 +56,7 @@ function LoginPage() {
       if (res.ok) {
         const response = await res.json();
         toast.success(response.message);
-        router.push("/");
+        router.push("/home");
       } else {
         const response = await res.json();
         toast.error(response.message);
