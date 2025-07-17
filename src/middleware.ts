@@ -1,12 +1,21 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+// add for bug
+import { cookies } from 'next/headers'
+
+export async function middleware(request: NextRequest) {
+  
+  // add for bug
+  const cookieStore = await cookies();
+
   const { pathname } = request.nextUrl;
   // Get the token from cookies
-  const token = request.cookies.get("token")?.value;
-  const isAdminValue = request.cookies.get("isAdmin")?.value;
-  // console.log(token, isAdmin);
+
+  const token = cookieStore.get("token")?.value;
+  const isAdminValue = cookieStore.get("isAdmin")?.value;
+  // console.log(token, isAdminValue);
+  // console.log(cookieStore)
   const isLoggedIn: boolean = !!token;
   const isAdmin: boolean = isAdminValue === "true";
   const authRoutes: string[] = ["/login", "/sign-up"];

@@ -45,16 +45,17 @@ function LoginPage() {
         headers: {
           "content-type": "application/json",
         },
-        credentials: "include",
         body: JSON.stringify(data),
+        credentials: "include",
       });
       if (res.ok) {
         const response = await res.json();
         toast.success(response.message);
         router.push("/home");
+        console.log(response)
       } else {
         const response = await res.json();
-        console.log(response);
+        console.log(response)
         toast.error(response.message);
       }
     } catch (error: unknown) {
