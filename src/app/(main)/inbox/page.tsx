@@ -19,7 +19,7 @@ function UserInbox() {
   const fetchBookings = async () => {
     setLoading(true);
     const response = await fetch(
-      `${API_BASE_URL}/booking/userBookings`,
+      `${API_BASE_URL}/api/booking/userBookings`,
       {
         method: "GET",
         headers: {

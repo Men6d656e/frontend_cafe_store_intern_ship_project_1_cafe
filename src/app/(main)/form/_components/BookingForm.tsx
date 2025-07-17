@@ -46,7 +46,7 @@ function BookingForm() {
   // submit form
   const onSubmit = async (data: BookingFormValues) => {
     console.log("Form data: ", data);
-    const response = await fetch(`${API_BASE_URL}/booking/new`, {
+    const response = await fetch(`${API_BASE_URL}/api/booking/new`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

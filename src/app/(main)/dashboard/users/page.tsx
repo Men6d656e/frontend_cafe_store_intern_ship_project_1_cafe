@@ -49,7 +49,7 @@ function UsersPage() {
   // initial fetch request
   const fetchUsers = async () => {
     setLoading(true);
-    const response = await fetch(`${API_BASE_URL}/admin/users`, {
+    const response = await fetch(`${API_BASE_URL}/api/admin/users`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -89,7 +89,7 @@ function UsersPage() {
     if (!currentUserToUpdated) return;
     setLoading(true);
     try {
-      const response = await fetch(`${API_BASE_URL}/admin/update`, {
+      const response = await fetch(`${API_BASE_URL}/api/admin/update`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

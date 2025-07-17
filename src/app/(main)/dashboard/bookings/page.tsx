@@ -27,7 +27,7 @@ function BookingPage() {
   const [acceptedBookings, setAcceptedBookings] = useState<Data[]>([]);
   // function to fetch bookings
   const fetchBookings = async () => {
-    const response = await fetch(`${API_BASE_URL}/admin/bookings`, {
+    const response = await fetch(`${API_BASE_URL}/api/admin/bookings`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -64,7 +64,7 @@ function BookingPage() {
   // update function
   async function updateBookingStatus(bookingId: string, status: string) {
     console.log(bookingId, status);
-    const response = await fetch(`${API_BASE_URL}/admin/updateStatus`, {
+    const response = await fetch(`${API_BASE_URL}/api/admin/updateStatus`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -85,7 +85,7 @@ function BookingPage() {
   // delete Booking
   const deleteBooking = async (bookingId: string) => {
     const response = await fetch(
-      `${API_BASE_URL}/admin/deleteBooking`,
+      `${API_BASE_URL}/api/admin/deleteBooking`,
       {
         method: "POST",
         headers: {

@@ -40,7 +40,7 @@ function LoginPage() {
     // console.log(data);
     try {
       setIsSubmitting(true);
-      const res = await fetch(`${API_BASE_URL}/auth/log-in`, {
+      const res = await fetch(`${API_BASE_URL}/api/auth/log-in`, {
         method: "POST",
         headers: {
           "content-type": "application/json",

@@ -45,7 +45,7 @@ function LoginPage() {
     // console.log(data);
     try {
       setIsSubmitting(true);
-      const res = await fetch(`${API_BASE_URL}/auth/sign-up`, {
+      const res = await fetch(`${API_BASE_URL}/api/auth/sign-up`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
