@@ -21,7 +21,6 @@ interface Data {
 }
 
 function page() {
-  const [loading, setLoading] = useState(false);
   const [data, setdata] = useState<Data[] | null>(null);
   const [pendingBookings, setPendingBookings] = useState<Data[]>([]);
   const [rejectedBookings, setRejectedBookings] = useState<Data[]>([]);
@@ -38,15 +37,12 @@ function page() {
     if (!response.ok) {
       const message = await response.json();
       toast.error(message.message || "Server Error");
-      setLoading(false);
     } else if (response.ok) {
       const data = await response.json();
       setdata(data.bookings);
-      setLoading(false);
     } else {
       const mesg = await response.json();
       toast.error(mesg.message || "server Error");
-      setLoading(false);
     }
   };
   // initial fetch

@@ -1,5 +1,5 @@
 "use client";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { ClipboardList, GalleryVerticalEnd, UsersRound } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

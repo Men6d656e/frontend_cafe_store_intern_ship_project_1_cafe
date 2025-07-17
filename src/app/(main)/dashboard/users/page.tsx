@@ -24,7 +24,7 @@ import { Loader } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import z, { includes } from "zod";
+import z from "zod";
 
 interface UserData {
   username: string;

@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import z, { email } from "zod";
+import z from "zod";
 
 const loginSchema = z.object({
   email: z.string().max(50, "Email less then 50 characters"),
@@ -94,7 +94,7 @@ function LoginPage() {
         </div>
       </form>
       <p className="pt-4 text-amber-950 ">
-        Don't have an account?
+        Don&apos;t have an account?
         <Link href={"/sign-up"}>
           <Button className="font-bold text-amber-900" variant={"link"}>
             Sign Up
