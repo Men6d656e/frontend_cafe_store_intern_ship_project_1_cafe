@@ -7,7 +7,7 @@ const fetchUserRole = async (): Promise<string | null> => {
   };
 
   try {
-    const res = await fetch(`${API_BASE_URL}/auth/my-role`, {
+    const res = await fetch(`${API_BASE_URL}/api/auth/my-role`, {
       method: "GET",
       headers: headersInit,
       credentials: "include",

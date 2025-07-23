@@ -16,7 +16,7 @@ function AllDashoardPage() {
   const [data, setdata] = useState<Data | null>(null);
   const fetchData = async () => {
     setLoading(true);
-    const response = await fetch(`${API_BASE_URL}api//admin/all`, {
+    const response = await fetch(`${API_BASE_URL}/api/admin/all`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

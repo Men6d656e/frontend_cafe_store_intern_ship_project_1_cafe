@@ -48,7 +48,7 @@ function Navbar() {
   const router = useRouter();
 
   const logedOut = async () => {
-    const respones = await fetch(`${API_BASE_URL}/auth/logout`, {
+    const respones = await fetch(`${API_BASE_URL}/api/auth/logout`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
